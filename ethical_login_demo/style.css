@@ -1,0 +1,244 @@
+* { box-sizing: border-box; }
+
+:root {
+  color-scheme: light;
+  --ink: #262626;
+  --muted: #737373;
+  --line: #dbdbdb;
+  --blue: #087bea;
+  --soft-blue: #eaf4ff;
+  --warning: #8a3b00;
+  --soft-warning: #fff4e8;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: #fafafa;
+}
+
+.page {
+  width: min(920px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.demo-card {
+  width: min(100%, 370px);
+  padding: 32px 28px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 8px 30px rgb(0 0 0 / 3%);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 32px;
+  font-weight: 750;
+  letter-spacing: -1.7px;
+}
+
+.brand-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border: 3px solid #262626;
+  border-radius: 11px;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.demo-label {
+  margin: 22px 0 8px;
+  color: #0867b2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.intro {
+  max-width: 280px;
+  margin: 0 auto 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+form { display: grid; gap: 10px; }
+
+input {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fafafa;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+
+input:focus-visible, button:focus-visible {
+  outline: 3px solid #80bdff;
+  outline-offset: 2px;
+}
+
+.privacy-note {
+  margin: 0 0 2px;
+  color: #555;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+button {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--blue);
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(.96); }
+
+.footer-note {
+  margin: 26px 0 0;
+  color: #777;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.warning {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid #f0c18d;
+  border-radius: 9px;
+  background: var(--soft-warning);
+  color: #482400;
+  text-align: left;
+}
+
+.warning-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #a94b00;
+  color: #fff;
+  font-weight: 900;
+}
+
+.warning h2 {
+  margin: 12px 0 8px;
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.warning p, .warning li {
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.warning ul { padding-left: 19px; }
+.warning li + li { margin-top: 5px; }
+
+.secondary {
+  margin-top: 8px;
+  background: #fff;
+  color: #6d3100;
+  border: 1px solid #d9a56d;
+}
+
+.side-note {
+  max-width: 280px;
+  color: #444;
+}
+
+.shield {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: var(--soft-blue);
+  color: #0867b2;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.side-note h2 {
+  margin: 18px 0 8px;
+  font-size: 24px;
+  letter-spacing: -.5px;
+}
+
+.side-note p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.safe-tag {
+  display: inline-block;
+  padding: 7px 9px;
+  border: 1px solid #b7dfc4;
+  border-radius: 6px;
+  background: #effaf2;
+  color: #176534 !important;
+  font-size: 10px !important;
+  font-weight: 800;
+  letter-spacing: .6px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+[hidden] { display: none !important; }
+
+@media (max-width: 700px) {
+  .page {
+    min-height: 100svh;
+    padding: 24px 16px;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .demo-card { padding: 28px 22px 22px; }
+  .side-note { max-width: 370px; text-align: center; }
+  .shield { margin: 0 auto; }
+  .side-note h2 { font-size: 21px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button { transition: filter .15s ease; }
+}

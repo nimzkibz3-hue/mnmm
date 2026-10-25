@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>PhotoShare Login Demo — Security Awareness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="demo-card" aria-labelledby="brand-title">
+      <div class="brand" id="brand-title" aria-label="PhotoShare demo">
+        <span class="brand-icon" aria-hidden="true">◎</span>
+        <span>PhotoShare</span>
+      </div>
+      <p class="demo-label">CYBERSECURITY TRAINING DEMO</p>
+      <p class="intro">Sign in to see how a suspicious login page can trick people.</p>
+
+      <form id="demo-form" autocomplete="off">
+        <label class="sr-only" for="username">Demo username</label>
+        <input id="username" name="username" type="text" placeholder="Demo username (optional)" autocomplete="off">
+        <label class="sr-only" for="password">Demo password</label>
+        <input id="password" name="password" type="password" placeholder="Do not enter a real password" autocomplete="new-password">
+        <p class="privacy-note"><span aria-hidden="true">🔒</span> This demo does not save or send anything you type.</p>
+        <button type="submit">Try demo login</button>
+      </form>
+
+      <div id="warning" class="warning" role="status" aria-live="polite" hidden>
+        <div class="warning-icon" aria-hidden="true">!</div>
+        <h2>Security lesson: pause before you sign in</h2>
+        <p>This is a training page, not a real account service. The details you entered were not saved or transmitted.</p>
+        <ul>
+          <li>Check the website address before entering a password.</li>
+          <li>Open the official app or type its known address yourself.</li>
+          <li>Never share one-time verification codes.</li>
+          <li>Use a unique password and turn on two-factor authentication.</li>
+        </ul>
+        <button id="try-again" class="secondary" type="button">Try the demo again</button>
+      </div>
+
+      <p class="footer-note">Educational mockup · Not affiliated with Instagram or Meta</p>
+    </section>
+
+    <aside class="side-note">
+      <div class="shield" aria-hidden="true">✓</div>
+      <h2>Learn to spot phishing</h2>
+      <p>Real attackers may copy familiar login designs. A familiar look does not prove a page is genuine.</p>
+      <p class="safe-tag">SAFE DEMO · NO DATA COLLECTION</p>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
